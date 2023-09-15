@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --body-text-14: "Work Sans";
+  --h1-title: Syne;
+  --font-poppins: Poppins;
+  --components-button-large: Roboto;
+
+  /* font sizes */
+  --subtitles-size: 26px;
+  --h1-title-size: 135px;
+  --font-size-lg: 18px;
+  --font-size-3xs: 10px;
+  --font-size-xs: 12px;
+  --body-text-14-size: 14px;
+  --h2-title-size: 90px;
+  --components-button-large-size: 15px;
+
+  /* Colors */
+  --grey-scale-000: #fff;
+  --pimary-colour: #f07e15;
+  --color-gray-100: #1a1a1a;
+  --color-gray-200: #161615;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --greyscale-400: rgba(22, 22, 21, 0.5);
+  --color-gray-300: rgba(255, 255, 255, 0.5);
+  --color-dimgray: #626262;
+  --grey-scale-1000: #000;
+  --color-gainsboro: #d9d9d9;
+
+  /* Gaps */
+  --gap-5xs: 8px;
+
+  /* Paddings */
+  --padding-5xs: 8px;
+}

@@ -1,0 +1,54 @@
+.dopdown,
+.product-1,
+.product-2,
+.product-3,
+.product-4 {
+  position: absolute;
+  height: 22.76%;
+  left: 0;
+  display: inline-block;
+}
+.dopdown {
+  width: 100%;
+  top: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+}
+.product-1,
+.product-2,
+.product-3,
+.product-4 {
+  width: 81.13%;
+  top: 23.58%;
+  font-weight: 300;
+}
+.product-2,
+.product-3,
+.product-4 {
+  top: 41.46%;
+}
+.product-3,
+.product-4 {
+  top: 59.35%;
+}
+.product-4 {
+  top: 77.24%;
+}
+.dropdown-child {
+  position: absolute;
+  height: 0.81%;
+  width: 88.05%;
+  top: 18.29%;
+  right: 12.26%;
+  bottom: 80.89%;
+  left: -0.31%;
+  border-top: 1px solid var(--grey-scale-000);
+  box-sizing: border-box;
+}
+.dropdown {
+  width: 159px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--grey-scale-000);
+  font-family: var(--body-text-14);
+}

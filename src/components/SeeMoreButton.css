@@ -1,0 +1,40 @@
+.see-more {
+  position: relative;
+}
+.see-more-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.vector-icon3 {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.primary-button-child {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid var(--grey-scale-000);
+  box-sizing: border-box;
+  height: 1px;
+}
+.primary-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--grey-scale-000);
+  font-family: var(--body-text-14);
+}
