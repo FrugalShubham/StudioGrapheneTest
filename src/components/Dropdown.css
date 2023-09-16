@@ -49,6 +49,40 @@
   width: 159px;
   text-align: left;
   font-size: var(--font-size-xs);
-  color: var(--grey-scale-000);
+  /* color: var(--grey-scale-000); */
   font-family: var(--body-text-14);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div {
+  color: white;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content,
+.p {
+  display: none;
+  color: black;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-text {
+  color: black;
 }

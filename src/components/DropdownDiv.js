@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import "./Dropdown.css";
 
 const DropdownDiv = memo(
@@ -181,23 +181,58 @@ const DropdownDiv = memo(
       pRODUCT3Display,
     ]);
 
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+      // Define the API URL
+      const apiUrl = "https://fakestoreapi.com/products/categories";
+
+      // Fetch the data from the API
+      fetch(apiUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setData(data); // Update the state with the fetched data
+          setLoading(false); // Set loading to false
+        })
+        .catch((error) => {
+          setError(error); // Set error state if there's an issue
+          setLoading(false); // Set loading to false
+        });
+    }, []); // The empty dependency array ensures this effect runs once on component mount
+
+    if (loading) {
+      return <div>Loading...</div>;
+    }
+
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
+
     return (
-      <div className="dropdown" style={dropdownStyle}>
-        <div className="dopdown" style={dopdownStyle}>
-          Dopdown
-        </div>
-        <div className="product-1" style={pRODUCT1Style}>
-          PRODUCT 1
-        </div>
-        <div className="product-2" style={pRODUCT2Style}>
-          PRODUCT 2
-        </div>
-        <div className="product-3" style={pRODUCT3Style}>
-          PRODUCT 3
-        </div>
-        <div className="product-4">PRODUCT 4</div>
-        <div className="dropdown-child" />
-      </div>
+      <>
+        <select
+          className="dropdown dropdown-content"
+          placeholder="Products"
+          style={dropdownStyle}
+        >
+          <option value="volvo" style={pRODUCT1Style}>
+            Products
+          </option>
+          {data.map((product, idx) => (
+            <option key={idx} value="volvo" style={pRODUCT1Style}>
+              {product}
+            </option>
+          ))}
+          <div className="dropdown-child" />
+        </select>
+      </>
     );
   }
 );

@@ -63,9 +63,8 @@
 }
 .desktop-1-inner {
   top: 2082px;
-  left: -9px;
   background-color: var(--grey-scale-1000);
-  width: 1455px;
+  width: 100%;
   height: 66px;
 }
 .section {
